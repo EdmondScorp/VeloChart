@@ -1,0 +1,85 @@
+#container fieldset{
+   width:30%;
+   background-color: beige;
+   
+} 
+#show{
+   font-size: 20px;
+   display: none;
+}
+
+.container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+}
+
+.memberlist {
+	 counter-reset: section; 
+	 width:50%;
+}
+   
+.memberlist_table, .memberlist_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+/*Changed by Arthur*/
+.chart-container{
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*background-color: #00fa00;*/
+    width: 100%;
+    height: 150px;
+}
+.chart-container p{
+    text-align: center;
+    font-size: 3em;
+}
+.non-style{
+    display: none;
+}
+.chart{
+    display: flex;
+    /*background-color:darkgrey;*/
+    width: 100%;
+    height: 500px;
+    border-bottom: dashed #564949;
+    border-left: dashed #564949;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+}
+.chart_item {
+    margin-left: 5px;
+    /*background-color: blue;*/
+    width: 2%;
+
+
+}
+
+
+
+.memberlist_table::before {
+  counter-increment: section;                 
+  content: counter(section);                  
+}
+
+
+.memberlist_cell ,.memberlist_cell_head {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0.8em 1.2em;
+  overflow: hidden;
+  list-style: none;
+  border: solid 3px white;
+  background: rgba(112, 128, 144, 0.2);
+}
