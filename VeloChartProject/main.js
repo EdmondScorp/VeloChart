@@ -21,6 +21,7 @@ var addToList = function(list) {
         for (let i = 0; i < localStorage.length; i++){
             let x = document.createElement('div');
             x.style.cssText = "background-color: red; font-size: 20px; border-radius: 20%;";
+            x.id = i;
             let obj = JSON.parse(localStorage.getItem(localStorage.key(i)));
             //console.log(obj);
             x.innerHTML = obj.title;
@@ -128,7 +129,6 @@ var FormModule = (function() {
 })();
 
 //createing chart
-// console.log(localStorage)
 let chartCreatorModule = (function () {
 
     let colors = ['#7ce6a7','#77866f','#1c28d9','#e8db1e','#ff6ef3','#670101','#7fffff'];
@@ -174,7 +174,6 @@ let chartCreatorModule = (function () {
     }
 })();
 
-chartCreatorModule.memberObject();
 var setDataModule = (function(){
         // let counter = 0;
     class _CreateGroup {
